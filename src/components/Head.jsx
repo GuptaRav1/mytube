@@ -6,6 +6,7 @@ import {
 } from "../utils/constants";
 import { useDispatch } from "react-redux";
 import { toggleMenu } from "../utils/appSlice";
+import { Link } from "react-router-dom";
 
 const Head = () => {
 	const dispatch = useDispatch();
@@ -21,7 +22,9 @@ const Head = () => {
 					alt="menu"
 					onClick={() => toggleMenuHandler()}
 				/>
-				<img className="h-6" src={YOUTUBE_LOGO_URL} alt="logo" />
+				<a href="/">
+					<img className="h-6" src={YOUTUBE_LOGO_URL} alt="logo" />
+				</a>
 			</div>
 			<div className="col-span-10  text-center">
 				<input

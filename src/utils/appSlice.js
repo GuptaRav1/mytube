@@ -8,18 +8,15 @@ const appSlice = createSlice({
 		menu: true,
 	},
 	reducers: {
-		toggleTheme: (state) => {
-			state.theme = state.theme === "light" ? "dark" : "light";
-		},
-		setLanguage: (state, action) => {
-			state.language = action.payload;
-		},
 		toggleMenu: (state) => {
 			state.menu = !state.menu;
+		},
+		closeMenu: (state) => {
+			state.menu = false;
 		},
 	},
 });
 
-export const { toggleTheme, setLanguage, toggleMenu } = appSlice.actions;
+export const { toggleMenu, closeMenu } = appSlice.actions;
 
 export default appSlice.reducer;
